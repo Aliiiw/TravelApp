@@ -216,21 +216,21 @@ val Trips = listOf<HomeTripModel>(
     HomeTripModel(
         "https://imgcld.yatra.com/ytimages/image/upload/t_holidays_srplist_tablet_hc/v1501843603/DO_NOT_USE_Editorial_Images/Grand_palace_and_Wat_phra_keaw.jpg",
         "7 Days / 2 Person",
-        "Thailand Super Saver with only $1000 in 2021",
+        "Thailand Super Saver with only $1000 in 2022",
         4.8f
     ),
 
     HomeTripModel(
         "https://d3hne3c382ip58.cloudfront.net/files/uploads/bookmundi/resized/cmsfeatured/south-india-tour-package-1555403191-785X440.jpg",
         "7 Days / 2 Person",
-        "How to get around India on the cheap budget in 2021",
+        "How to get around India on the cheap budget in 2022",
         5.9f
     ),
 
     HomeTripModel(
         "https://imgcld.yatra.com/ytimages/image/upload/t_holidays_srplist_tablet_hc/v1501843603/DO_NOT_USE_Editorial_Images/Grand_palace_and_Wat_phra_keaw.jpg",
         "7 Days / 2 Person",
-        "Thailand Super Saver with only $1000 in 2021",
+        "Thailand Super Saver with only $1000 in 2022",
         4.8f
     ),
 
