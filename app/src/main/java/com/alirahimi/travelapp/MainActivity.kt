@@ -15,6 +15,7 @@ import androidx.core.view.WindowCompat
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.alirahimi.travelapp.screens.HomeScreen
 import com.alirahimi.travelapp.screens.SplashScreen
 import com.alirahimi.travelapp.ui.theme.TravelAppTheme
 import com.google.accompanist.insets.ProvideWindowInsets
@@ -37,10 +38,14 @@ class MainActivity : ComponentActivity() {
                     ) {
                         NavHost(
                             navController = navigationController,
-                            startDestination = "splash"
+                            startDestination = "home"
                         ) {
                             composable("splash") {
                                 SplashScreen(navigationController = navigationController)
+                            }
+
+                            composable("home") {
+                                HomeScreen(navigationController = navigationController)
                             }
                         }
                     }

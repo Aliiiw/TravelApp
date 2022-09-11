@@ -46,7 +46,13 @@ fun SplashScreen(navigationController: NavController) {
                 .navigationBarsPadding()
                 .padding(16.dp)
                 .background(
-                    brush = Brush.linearGradient(listOf(MyGreen, Color.Transparent)),
+                    brush = Brush.linearGradient(
+                        listOf(
+                            Color.Transparent,
+                            MyGreen,
+                            Color.Transparent
+                        )
+                    ),
                     shape = RoundedCornerShape(16.dp)
                 )
                 .padding(16.dp),
@@ -71,7 +77,9 @@ fun SplashScreen(navigationController: NavController) {
             )
 
             Button(
-                onClick = {},
+                onClick = {
+                    navigationController.navigate("home")
+                },
                 modifier = Modifier.padding(8.dp),
                 colors = ButtonDefaults.buttonColors(
                     backgroundColor = MyGreen,
