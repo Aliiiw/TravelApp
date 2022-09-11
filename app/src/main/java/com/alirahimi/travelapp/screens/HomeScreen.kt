@@ -58,9 +58,8 @@ fun HomeScreen(navigationController: NavController) {
             )
         }
 
-        itemsIndexed(Trips) { position, data ->
-            HomeTripItem(homeTripModel = data)
-
+        itemsIndexed(trips) { position, data ->
+            HomeTripItem(homeTripModel = data, navigationController = navigationController)
         }
 
         item {
@@ -152,7 +151,7 @@ fun CustomButton(vector: ImageVector, text: String) {
 }
 
 @Composable
-fun HomeTripItem(homeTripModel: HomeTripModel) {
+fun HomeTripItem(homeTripModel: HomeTripModel, navigationController: NavController) {
 
     Column(
         modifier = Modifier
@@ -165,10 +164,11 @@ fun HomeTripItem(homeTripModel: HomeTripModel) {
             contentScale = ContentScale.Crop,
             modifier = Modifier
                 .clip(RoundedCornerShape(8.dp))
-                .clickable { }
+                .clickable {
+                    navigationController.navigate("detail")
+                }
                 .height(200.dp)
                 .fillMaxWidth()
-
         )
 
         Spacer(modifier = Modifier.height(8.dp))
@@ -212,7 +212,7 @@ fun HomeTripItem(homeTripModel: HomeTripModel) {
     }
 }
 
-val Trips = listOf<HomeTripModel>(
+val trips = listOf<HomeTripModel>(
     HomeTripModel(
         "https://imgcld.yatra.com/ytimages/image/upload/t_holidays_srplist_tablet_hc/v1501843603/DO_NOT_USE_Editorial_Images/Grand_palace_and_Wat_phra_keaw.jpg",
         "7 Days / 2 Person",
